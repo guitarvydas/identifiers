@@ -2,10 +2,10 @@ identifiers {
   toplevel [x+] = ‛«x»’
   macro [x] = ‛«x»’
 
-identBegin [q] = ‛"’
-identEnd [q] = ‛"’
-innerIdentBegin [q] = ‛_L_’
-innerIdentEnd [q] = ‛_R_’
+identBegin [q] = ‛_’
+identEnd [q] = ‛’
+innerIdentBegin [q] = ‛__’
+innerIdentEnd [q] = ‛__’
 
 identDelimiter [x] = ‛«x»’
 
@@ -15,7 +15,7 @@ nestedIdent_classic [name] = ‛«name»’
 
 recursiveIdent_nested [b m+ e] = ‛«b»«m»«e»’
 recursiveIdent_empty [b e] = ‛«b»«e»’
-recursiveIdent_space [c] = ‛__’
+recursiveIdent_space [c] = ‛_’
 recursiveIdent_leaf [c] = ‛«c»’
 
 classicIdent [first rest*] = ‛«first»«rest»’
