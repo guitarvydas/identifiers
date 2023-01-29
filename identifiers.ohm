@@ -1,0 +1,29 @@
+identifiers {
+  toplevel = macro+
+  macro =
+    | nestedIdent
+    | ~identDelimiter any
+
+identBegin = "❲"
+identEnd = "❳"
+innerIdentBegin = identBegin
+innerIdentEnd = identEnd
+
+identDelimiter = identBegin | identEnd
+
+nestedIdent =
+  | identBegin recursiveIdent+ identEnd -- nested
+  | identBegin identEnd -- empty
+  | classicIdent -- classic
+
+recursiveIdent =
+  | innerIdentBegin recursiveIdent+ innerIdentEnd -- nested
+  | innerIdentBegin innerIdentEnd -- empty
+  | ~identDelimiter any -- leaf
+
+classicIdent = firstChar restChar*
+firstChar = letter | "_"
+restChar = alnum | firstChar
+
+}
+  

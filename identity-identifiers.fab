@@ -1,0 +1,24 @@
+identifiers {
+  toplevel [x+] = ‛«x»’
+  macro [x] = ‛«x»’
+
+identBegin [q] = ‛«q»’
+identEnd [q] = ‛«q»’
+innerIdentBegin [q] = ‛«q»’
+innerIdentEnd [q] = ‛«q»’
+
+identDelimiter [x] = ‛«x»’
+
+nestedIdent_nested [b m+ e] = ‛«b»«m»«e»’
+nestedIdent_empty [b e] = ‛«b»«e»’
+nestedIdent_classic [name] = ‛«name»’
+
+recursiveIdent_nested [b m+ e] = ‛«b»«m»«e»’
+recursiveIdent_empty [b e] = ‛«b»«e»’
+recursiveIdent_leaf [c] = ‛«c»’
+
+classicIdent [first rest*] = ‛«first»«rest»’
+firstChar [c] = ‛«c»’
+restChar [c] = ‛«c»’
+}
+  
