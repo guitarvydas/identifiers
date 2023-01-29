@@ -4,8 +4,8 @@ identifiers {
 
 identBegin [q] = ‛"’
 identEnd [q] = ‛"’
-innerIdentBegin [q] = ‛___’
-innerIdentEnd [q] = ‛___’
+innerIdentBegin [q] = ‛_L_’
+innerIdentEnd [q] = ‛_R_’
 
 identDelimiter [x] = ‛«x»’
 
