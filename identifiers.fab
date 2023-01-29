@@ -4,8 +4,8 @@ identifiers {
 
 identBegin [q] = ‛"’
 identEnd [q] = ‛"’
-innerIdentBegin [q] = ‛\\\\"’
-innerIdentEnd [q] = ‛\\\\"’
+innerIdentBegin [q] = ‛___’
+innerIdentEnd [q] = ‛___’
 
 identDelimiter [x] = ‛«x»’
 
@@ -15,6 +15,7 @@ nestedIdent_classic [name] = ‛«name»’
 
 recursiveIdent_nested [b m+ e] = ‛«b»«m»«e»’
 recursiveIdent_empty [b e] = ‛«b»«e»’
+recursiveIdent_space [c] = ‛__’
 recursiveIdent_leaf [c] = ‛«c»’
 
 classicIdent [first rest*] = ‛«first»«rest»’

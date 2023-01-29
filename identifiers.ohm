@@ -19,6 +19,7 @@ nestedIdent =
 recursiveIdent =
   | innerIdentBegin recursiveIdent+ innerIdentEnd -- nested
   | innerIdentBegin innerIdentEnd -- empty
+  | ~identDelimiter space -- space
   | ~identDelimiter any -- leaf
 
 classicIdent = firstChar restChar*
