@@ -6,17 +6,11 @@ This is a macro processor that looks only at classic ids and ids delimited by �
 
 The following test:
 ```
-void ❲hello world❳ (int ❲abc❲def ghi jkl❳mno❳) {
-  int x = ❲abc❲def ghi jkl❳mno❳;
-  printf ("%d\n", ❲abc❲def ghi jkl❳mno❳);
-}
+junk stuff ❲single❳ ❲two names❳ ❲abc❲def ghi jkl❳mno❳ and ❲abc ❲x y z❳ def❳ more ❲p❲❳q❳ {and again}
 ```
 is transpiled into
 ```
-void _hello_world (int _abc__def_ghi_jkl__mno) {
-  int x = _abc__def_ghi_jkl__mno;
-  printf ("%d\n", _abc__def_ghi_jkl__mno);
-}
+junk stuff _single _two_names _abc__def_ghi_jkl__mno and _abc___x_y_z___def more _p____q {and again}
 ```
 
 The source file, test.txt, contains some ids containing spaces.  IDs can nest, so IDs can contain other bracketed IDs.

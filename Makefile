@@ -3,13 +3,16 @@ here=`pwd`
 all : identifierstest
 
 identifierstest:
+	./fab/fab ${here}/identifiers.ohm ${here}/identifiers.fab ${here}/emptysupport.js <${here}/test.txt
+
+identifierstestc:
 	./fab/fab ${here}/identifiers.ohm ${here}/identifiers.fab ${here}/emptysupport.js <${here}/test.c
 
-identifierstest0:
-	./fab/fab ${here}/identifiers.ohm ${here}/identifiers.fab ${here}/emptysupport.js <${here}/test.txt
 
 identity:
 	./fab/fab ${here}/identifiers.ohm ${here}/identity-identifiers.fab ${here}/emptysupport.js <${here}/test.txt
+
+
 
 install: repos npmstuff
 
